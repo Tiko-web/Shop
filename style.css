@@ -1,14 +1,61 @@
+body {
+    background-color:rgb(233, 224, 224);
+}
+
+.logo {
+    width: 7%;
+    /* height: 7%; */
+    background-color: rgb(223, 174, 174);;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1;
+    animation-name: Logo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Logo {
+    0% {
+       transform: scale();
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.logo:hover {
+    box-shadow: 0px 10px 10px rgb(151, 122, 122);
+}
+
 .header {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color:rgb(233, 224, 224);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.header-nav {
+    width: 70%;
+    background-color: rgb(223, 207, 207);
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgb(151, 122, 122);
+    animation-name: FadeIn;
+    animation-duration: 3s;
 }
 
 ul {
-    list-style: none;
-    text-align: center;
-    color: #fff; 
-    
+    display: flex;
+    justify-content: space-around;
 }
 
 li {
@@ -19,15 +66,12 @@ li {
     animation-duration: 3s;
 }
 
-li:not(:last-child) {
-    margin-right: 60px;
-}
+
 
 li:hover  {
     color: rgb(121, 116, 116);
     cursor: pointer;
     font-size: 35px;
-    font-style: italic;
 }
 
 .slider {
@@ -37,7 +81,6 @@ li:hover  {
     justify-content: space-around;
     margin-top: 20px;
     animation-name: ZoomIn;
-    animation-duration: 2s;
 }
 .img1 {
     width: 400px;
@@ -61,6 +104,7 @@ li:hover  {
 }
 .box {
     position: relative;
+    
 }
 .btn {
     position: absolute;
@@ -86,3 +130,73 @@ li:hover  {
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
+
+/* footer */
+h2 {
+    text-align: center;
+}
+
+.footer-box {
+    width: 50%;
+    background-color: rgb(223, 207, 207);
+    /* height: 300px; */
+    margin: 0 auto;
+    border-radius: 10px;
+    animation-name: FadeIn;
+    animation-duration: 3s;
+   
+}
+
+.contact-title {
+    animation-name: FadeIn;
+    animation-duration: 3s;
+    
+}
+
+@keyframes FadIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.footer-line1 {
+    display: flex;
+    justify-content: space-around; 
+}
+
+input {
+    border: none;
+    border:1px solid black;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 110px;
+    text-align: center;
+}
+
+.button  {
+    border: none;
+    border-radius: 20px;
+    width: 110px;
+    border:1px solid black;
+    cursor: pointer;
+    transition: all 0.5;
+}
+
+.button:hover {
+    background-color:rgb(231, 213, 216) ;
+}
+
+.contact-block {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;  
+}
+
+.contact-text {
+    margin-left: 10px;
+}
+
+i {
+    color: blue;
+}
+

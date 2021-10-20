@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/5698a9d816.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Shop</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="logo">TG-SHOP</div>
     <div class="header">
+      <div class="header-nav">
         <ul>
-            <li>KIDS</li>
-            <li>WOMEN</li>
-            <li>MEN</li>
+          <li>KIDS</li>
+          <li>WOMEN</li>
+          <li>MEN</li>
         </ul>
+      </div>
     </div>
 
     <div class="slider">
-        <div class="box">
-            <img class="img1" src="kids.jpg" alt="kids">
-            <button class="btn">Shop</button>
-        </div>
-        <div class="box">
-            <img class="img1" src="women.jpg" alt="women">
-            <button class="btn">Shop</button>
-        </div>
-        <div class="box">
-            <img class="img1" src="men.jpg" alt="men">
-            <button class="btn">Shop</button>
+      <div class="box">
+        <img class="img1" src="kids.jpg" alt="kids" />
+        <button class="btn">Shop</button>
+      </div>
+      <div class="box">
+        <img class="img1" src="women.jpg" alt="women" />
+        <button class="btn">Shop</button>
+      </div>
+      <div class="box">
+        <img class="img1" src="men.jpg" alt="men" />
+        <button class="btn">Shop</button>
+      </div>
+    </div>
+
+    <Footer class="contact"> 
+        <h2 class="contact-title">Contact</h2>
+        <div class="footer-box">
+            <div class="footer-line1">
+                <form action="">
+                    <h3>Fill the form</h3>
+                    <div class="input-box">
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" placeholder="Name/Surname" required>
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                       </div>
+                       <div>
+                        <button id="btn-send" class="button">Send</button>
+                    </div>
+                </form>
+
+                <div class="footer-line2">
+                    <h3>Contact Info</h3>
+                    <div class="contact-block">
+                        <i class="fas fa-phone-volume"></i>
+                        <p class="contact-text">+995 778345271</p>
+                      </div>
+                      <div class="contact-block">
+                        <i class="far fa-envelope"></i>
+                        <p class="contact-text">example@yahoo.com</p>
+                      </div>
+                      <div class="contact-block">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="contact-text">Abashidze Street</p>
+                      </div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
-    
-</body>
+    </Footer>
+  </body>
 </html>
