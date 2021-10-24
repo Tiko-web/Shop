@@ -1,85 +1,78 @@
 body {
-    background-color:rgb(233, 224, 224);
-}
-
-.logo {
-    width: 7%;
-    /* height: 7%; */
-    background-color: rgb(223, 174, 174);;
-    padding: 10px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 10px;
-    cursor: pointer;
-    transition: all 0.5s;
-    position: fixed;
-    z-index: 1;
-    animation-name: Logo;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Logo {
-    0% {
-       transform: scale();
-    }
-    100% {
-        transform: translateY(30px);
-    }
-}
-
-.logo:hover {
-    box-shadow: 0px 10px 10px rgb(151, 122, 122);
+    background-color: rgb(235, 225, 225);
 }
 
 .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color:rgb(233, 224, 224);
+    width: 70%;
+    /* height: 200px; */
+    background-color: rgb(223, 207, 207);
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-    
-}
-
-.header-nav {
-    width: 70%;
-    background-color: rgb(223, 207, 207);
-    border-radius: 20px;
-    box-shadow: 0px 10px 10px rgb(151, 122, 122);
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 20px;
+    transition: all 2s;
     animation-name: FadeIn;
     animation-duration: 3s;
 }
 
-ul {
-    display: flex;
-    justify-content: space-around;
-}
 
-li {
-    display: inline;
-    font-size: 25px;
+.h-item{
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: bold;
     transition: all 1s;
     animation-name: FadeIn;
-    animation-duration: 3s;
+    animation-duration: 1s;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.h-item:hover {
+    color: grey;
+}
+
+.drop1 {
+    background-color:rgb(226, 209, 212);
+    margin-right: 0;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 20px;
+    display: none;
 }
 
 
 
-li:hover  {
+li {
+    list-style: none;
+    font-size: 20px; 
+    transition: all 1s;
+    text-align: center;
+    animation-name: FadeIn;
+    animation-duration: 3s;
+}
+
+
+.item1:hover ~ .drop1  {
+    display: block;
+}
+
+.li:hover  {
     color: rgb(121, 116, 116);
     cursor: pointer;
     font-size: 35px;
 }
+
+
 
 .slider {
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 40px;
     animation-name: ZoomIn;
 }
 .img1 {
@@ -131,16 +124,109 @@ li:hover  {
     100%{opacity: 1;}
 }
 
+/* grid-gallery  */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: rgb(83, 80, 80);
+    font-size: 40px;
+    animation-name: ZoomIn;
+    animation-duration: 2s;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+
+.container {
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 5px; 
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  animation-name: ZoomIn;
+  animation-duration: 2s;
+  transition: all 1s;
+}
+.gallery__img:hover {
+    cursor: pointer;
+    opacity: .7;
+    border: 2px solid rgb(99, 94, 94);
+}
+
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 6;
+
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+}
+
+.gallery__item--6 {
+  grid-column-start: 4;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
 /* footer */
 h2 {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .footer-box {
-    width: 50%;
+    width: 100%;
     background-color: rgb(223, 207, 207);
-    /* height: 300px; */
-    margin: 0 auto;
     border-radius: 10px;
     animation-name: FadeIn;
     animation-duration: 3s;
@@ -158,10 +244,13 @@ h2 {
     100%{opacity: 1;}
 }
 
+
 .footer-line1 {
     display: flex;
     justify-content: space-around; 
 }
+
+
 
 input {
     border: none;
@@ -189,8 +278,11 @@ input {
 .contact-block {
     display: flex;
     justify-content: center;
-    align-items: baseline;  
+    align-items: baseline; 
+    margin-bottom: 30px; 
+    margin-top: 10px;
 }
+
 
 .contact-text {
     margin-left: 10px;
@@ -200,3 +292,17 @@ i {
     color: blue;
 }
 
+
+.map {
+    width: 40%;
+    height: 40vh;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.map1 {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+}
